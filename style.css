@@ -1,0 +1,114 @@
+
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f0f0f0; */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('https://www.nasdaq.com/sites/acquia.prod/files/2023/02/16/0288-Q23_February%20Editorial%20Article%20Series%20Images_CC6.jpg?130438120');
+    backdrop-filter: blur();
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+    text-align: center;
+    padding: 50px 250px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+.loading-bar {
+    width: 100%;
+    height: 4px;
+    background-color: #ccc;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none; /* Hide by default */
+}
+
+.loading-progress {
+    height: 100%;
+    width: 0;
+    background-color: #007bff;
+    position: relative;
+    animation: loadingAnimation 2s infinite;
+}
+
+@keyframes loadingAnimation {
+    0% { width: 0; }
+    50% { width: 50%; }
+    100% { width: 100%; }
+}
+
+
+.loading-icon {
+    display: none;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .loading-icon img {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Mobile responsive styles */
+@media (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+  
+    .chat-bubble {
+      max-width: 90%;
+    }
+  
+    input[type="text"] {
+      padding: 8px;
+    }
+  
+    button#submit-button {
+      padding: 8px 15px;
+    }
+  }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jan's Voice Assistant</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="Icon.png" type="image/x-icon"/>
+  </head>
+  <body>
+    <center>
+      <div>
+        <img src="logo-2.png" alt="">
+      </div>
+      <div class="container">
+        <div class="loading-bar"></div>
+
+        <h1>My Voice Assistant</h1>
+
+
+        <form onsubmit="
+        event.preventDefault();
+        conversationUserAdd(document.getElementById('input-text').value);
+        openai_test();
+        ">
+          <input type="text" id="input-text" placeholder="Ask me anything..." />
+          <br /><br />
+          <button id="submit-button">Submit</button>
+        </form>
+        <div id="chat-container"></div>
+      </div>
+      <br />
+      <div class="container">
+        <button
+          onclick='() => { 
+            setTimeout(() => playByText("en-US", "Hello, world"), 300)
+          }'
+          id="speakButton"
+        >
+          Speak
+        </button>
+      </div>
+
+      <div>(powered by Chatgpt / Open.AI)</div>
+
+      <div class="bg-image"></div>
+    </center>
+  </body>
+  <script src="script.js"></script>
+</html>
